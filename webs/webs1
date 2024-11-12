@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectángulo con Imagen de Fondo y Texto</title>
+  <style>
+    /* Estilo para el contenedor (rectángulo) */
+    .rectangulo {
+      width: 500px;               /* Ancho del rectángulo */
+      height: 300px;              /* Altura del rectángulo */
+      background-image: url('ruta/a/tu/imagen.jpg'); /* Ruta de la imagen */
+      background-size: cover;     /* Ajusta la imagen para cubrir todo el rectángulo */
+      background-position: center; /* Centra la imagen dentro del recuadro */
+      background-attachment: fixed; /* Fija la imagen al fondo para que no se mueva al hacer scroll */
+      color: white;               /* Color del texto */
+      display: flex;              /* Usa flexbox para alinear contenido */
+      justify-content: center;    /* Centra el texto horizontalmente */
+      align-items: center;        /* Centra el texto verticalmente */
+      text-align: center;         /* Alineación del texto */
+      font-size: 20px;            /* Tamaño de la fuente */
+      padding: 20px;              /* Espaciado interno (opcional) */
+      border: 2px solid #000;     /* Borde opcional alrededor del rectángulo */
+      box-sizing: border-box;     /* Incluye el borde y padding en las dimensiones */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rectangulo">
+    <p>Este es un texto dentro de un rectángulo con imagen de fondo.</p>
+  </div>
+
+</body>
+</html>

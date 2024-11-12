@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salón de Eventos - ¡Tu lugar ideal para cualquier ocasión especial!">
+  <title>Jardin de Eventos</title>
+  <style>
+   
+    .imagen-principal {
+      width: 100%;    
+      height: auto;   
+      max-width: 1200px; 
+      margin: 0 auto; 
+      display: block; 
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #52d14e;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #4fa55d;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: rgb(12, 5, 5);
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #32be20;
+    }
+
+    .container {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #57da61;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-us img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-us img:hover {
+      transform: scale(1.05);
+    }
+
+    .services, .testimonials {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service, .testimonial {
+      background-color: #fff;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .service h3, .testimonial h3 {
+      color: #46cf2b;
+    }
+
+    .service img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #54da7c;
+    }
+
+    footer {
+      background-color: #7deb9eec;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .services, .testimonials {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services, .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <header>
+    <h1>Jardin de Eventos</h1>
+    <p>¡El lugar perfecto para tus momentos especiales!</p>
+  </header>
+
+  <nav>
+    <a href="#about">Sobre Nosotros</a>
+    <a href="#services">Servicios</a>
+    <a href="#testimonials">Testimonios</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+  <p>
+    ¡Bienvenidos a nuestro jardín de eventos, el lugar perfecto para hacer de tu celebración un momento inolvidable! Imagina un espacio rodeado de naturaleza, con amplias áreas verdes, flores vibrantes y una atmósfera tranquila que hará que cada instante se convierta en un recuerdo especial.<br> Ya sea que estés planeando una boda de ensueño, un cumpleaños único o una reunión familiar, nuestro jardín ofrece el ambiente ideal para crear momentos mágicos. <br>Con un equipo de profesionales comprometidos y un servicio personalizado, nos aseguramos de que cada detalle sea perfecto para que disfrutes de tu evento sin preocupaciones.<br> ¡Ven y descubre por qué nuestro jardín es el lugar que estabas buscando para tu próxima celebración!
+</p>
+  <div class="container" id="about">
+    <h2 class="section-title">Sobre Nosotros</h2>
+    <div class="about-us">
+      <img
+      src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/442471251_122110869254301200_125572954170308168_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sVVy9ZDvZYMQ7kNvgF7V9hE&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=Al1yM8nDEA6Nrj9UtweQq7b&oh=00_AYCLAyQIlmBYue8ahVcxAYI-PV5-xnL8AYcRo-_7baqQ8Q&oe=6738382C" 
+      alt="Imagen principal del salón" class="imagen-principal">
+      <p>En nuestro salón de eventos, ofrecemos un espacio único y versátil para cualquier tipo de ocasión, desde bodas hasta conferencias. Con años de experiencia, estamos comprometidos a brindar un servicio excepcional.</p>
+    </div>
+  </div>
+
+  <!-- Sección de Servicios -->
+  <div class="container" id="services">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <img
+        src="https://scontent.fcbb2-1.fna.fbcdn.net/v/t39.30808-6/462318264_122113844318529810_2697393125747445953_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pSdMmfmqN5EQ7kNvgHY5dQw&_nc_zt=23&_nc_ht=scontent.fcbb2-1.fna&_nc_gid=AutE8oLLxi4sB4Jw3G9puuC&oh=00_AYApMwlr7aGtHoZuMh0mQYkEzKvuzOqen0BsuWnNsf4g8Q&oe=67387361"
+         alt="Servicio 2">
+
+        <h3>Bodas y Celebraciones</h3>
+        <p>Disfruta de un ambiente elegante y personalizado para el día más importante de tu vida.</p>
+      </div>
+      <div class="service">
+        <img src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/440962104_122110868852301200_8950478408290891395_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WHTFejTBR5wQ7kNvgFxJTcW&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=AkIGlytjJf50xozOR2hkvrz&oh=00_AYCXuj2GioJZ6eIsR3YPCuzRBQMMhTHLnUwqYYDhfPzfPw&oe=67385CDC" 
+        alt="Servicio 2">
+        <h3>Conferencias y Eventos Corporativos</h3>
+        <p>Un espacio moderno y cómodo para tus eventos de empresa o reuniones importantes.</p>
+      </div>
+      <div class="service">
+        <img src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/442438263_122110869284301200_1849894685663399582_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lwMF1jLN9FYQ7kNvgHcdzGm&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=AFuKDiLu6Rq1Y2N5C-oHKyP&oh=00_AYCgRtgKIFC68pIX41_c1ZVgeFyMSo10PM1pQD-vGD546Q&oe=67382B82" alt="Servicio 3">
+        <h3>Fiestas y Reuniones Sociales</h3>
+        <p>Ofrecemos un ambiente animado para fiestas y reuniones con amigos o familiares.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Testimonios -->
+  <div class="container" id="testimonials">
+    <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        
+        <h3>María López</h3>
+        <p>"Fue un evento maravilloso. Todo salió perfecto, desde la decoración hasta el servicio. ¡Recomendado al 100%!"</p>
+      </div>
+      <div class="testimonial">
+        
+        <h3>Carlos García</h3>
+        <p>"El salón es hermoso, y la atención fue excelente. Un lugar ideal para cualquier celebración."</p>
+      </div>
+      <div class="testimonial">
+        
+        <h3>Laura Martínez</h3>
+        <p>"Gracias por hacer que nuestra boda fuera tan especial. Un ambiente acogedor y profesional."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Contacto -->
+  <div class="container" id="contact">
+    <h2 class="section-title">Contáctanos</h2>
+    <form action="#" method="post">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos y Condiciones</a>
+      <a href="#">Redes Sociales</a>
+    </div>
+    <p>&copy; 2024 Salón de Eventos - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

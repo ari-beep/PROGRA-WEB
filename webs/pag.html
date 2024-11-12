@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardín de Eventos</title>
+  <style>
+    /* Reglas generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #1b5e20; /* Verde hoja seca */
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    /* Sección de Bienvenida */
+    .bienvenida {
+      background: url('https://via.placeholder.com/1500x800/006400/ffffff?text=Bienvenida') center/cover no-repeat;
+      padding: 120px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .bienvenida h2 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .bienvenida p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Características Únicas */
+    .caracteristicas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 50px 20px;
+      background-color: #e8f5e9;
+    }
+
+    .caracteristicas h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .caracteristica {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .caracteristica:hover {
+      transform: translateY(-10px);
+    }
+
+    .caracteristica h3 {
+      font-size: 1.8em;
+      color: #2c6e2f;
+      margin-bottom: 15px;
+    }
+
+    .caracteristica p {
+      color: #444;
+    }
+
+    /* Galería */
+    .galeria {
+      padding: 60px 20px;
+      background-color: #fafafa;
+      text-align: center;
+    }
+
+    .galeria h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .galeria-images {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .galeria-images img {
+      width: 32%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .galeria-images img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Servicios */
+    .servicios {
+      background-color: #c8e6c9;
+      padding: 60px 20px;
+    }
+
+    .servicios h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .servicio {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .servicio:hover {
+      transform: translateY(-10px);
+    }
+
+    .servicio h3 {
+      font-size: 1.8em;
+      color: #2c6e2f;
+      margin-bottom: 20px;
+    }
+
+    .servicio p {
+      color: #444;
+    }
+
+    /* Paquetes y Precios */
+    .paquetes {
+      background-color: #81c784;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .paquetes h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .paquete {
+      background-color: #fff;
+      padding: 40px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .paquete:hover {
+      transform: translateY(-10px);
+    }
+
+    .paquete h3 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .paquete p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    /* Contacto */
+    .contacto {
+      background-color: #388e3c;
+      padding: 60px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .contacto p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .contacto form input, .contacto form textarea {
+      width: 80%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+    }
+
+    .contacto form button {
+      background-color: #2c6e2f;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    /* Redes Sociales */
+    .redes {
+      text-align: center;
+      background-color: #2c6e2f;
+      padding: 20px 0;
+    }
+
+    .redes a {
+      color: white;
+      font-size: 1.5em;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Jardín de Eventos</h1>
+    <p>El lugar perfecto para celebrar tus momentos especiales</p>
+    <nav>
+      <ul>
+        <li><a href="#bienvenida">Bienvenida</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#paquetes">Paquetes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Bienvenida -->
+  <section id="bienvenida" class="bienvenida">
+    <h2>Bienvenidos a nuestro Jardín de Eventos</h2>
+    <p>En nuestro jardín encontrarás el lugar ideal para realizar todo tipo de eventos, desde celebraciones familiares hasta reuniones corporativas. ¡Haz de tu evento algo inolvidable!</p>
+  </section>
+
+  <!-- Características -->
+  <section id="caracteristicas" class="caracteristicas">
+    <h2>Características Únicas</h2>
+    <div class="caracteristica">
+     
